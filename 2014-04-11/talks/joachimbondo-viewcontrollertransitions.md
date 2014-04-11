@@ -1,0 +1,1 @@
+Slides and code available at [github.com/osteslag/cocoa-heads-cph-dk-04-14](https://github.com/osteslag/cocoa-heads-cph-dk-04-14).
