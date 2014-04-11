@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		308A6147455D0F59E109ECE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308A671FF5D44E3393065672 /* UIKit.framework */; };
+		308A6186CDD328BD86FF076F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 308A604705117CCAAD2F15CD /* InfoPlist.strings */; };
+		308A62855BAC69FACBC0E020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308A6F7DC6F82ECF7324ECED /* Images.xcassets */; };
+		308A64BBCAA051F917570BEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 308A6DC3F334B7F9CB83FBFA /* InfoPlist.strings */; };
+		308A66230DD31B772E311253 /* swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 308A6A8B6FD9057523028579 /* swizzle.m */; };
+		308A68E3011B510C16967A7F /* dyci_funTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 308A6C16EBF772162EB689B9 /* dyci_funTests.m */; };
+		308A69DDA8C5F2D032764779 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308A6885114E84CD639D21EE /* Foundation.framework */; };
+		308A6AB38C4C4383976CED1B /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 308A675E6A9DDB0D81D21A28 /* alarm.wav */; };
+		308A6AFB3DBEDF09DEA4E4C2 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 308A6523F19821EFF7984850 /* MyCell.m */; };
+		308A6B19D8ED70C369419B8D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308A60B549581DFE6618ECB9 /* XCTest.framework */; };
+		308A6B79F1072B586BF86C66 /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 308A6A2F06519CF00F7B33FC /* MyVC.m */; };
+		308A6C308A038C14F0DF4B3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308A6F8DE01D0F0A530409BC /* CoreGraphics.framework */; };
+		308A6D71936823D1B49AA1C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308A6885114E84CD639D21EE /* Foundation.framework */; };
+		308A6DA36EE80E7EE1379B76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308A671FF5D44E3393065672 /* UIKit.framework */; };
+		308A6E4F3EAEC2AE14F2AA76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 308A681531AB30EB2E36576F /* main.m */; };
+		308A6EDDABDF1033BD93377B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 308A6874D2AB883007F5EEE9 /* AppDelegate.m */; };
+		877CE55F01FA4CFAABFD6A44 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9608C9FF0CC14EECB2309066 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		308A6CD79FC17ABC0EDD586B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308A616F48DE636D46ED336D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308A6F4A2A5F4E147A10216E;
+			remoteInfo = "dyci-fun";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		308A60B549581DFE6618ECB9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		308A60C2F73958CEF7470996 /* dyci-fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dyci-fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		308A62F4AD0F48866E07C858 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		308A6523F19821EFF7984850 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		308A656F31BD9FE2B4D14D8F /* dyci-funTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dyci-funTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		308A65CDBFCA845A8A51FF32 /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
+		308A671FF5D44E3393065672 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		308A6756ADDBA0F3384E763A /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		308A675E6A9DDB0D81D21A28 /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
+		308A681531AB30EB2E36576F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		308A6874D2AB883007F5EEE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		308A6885114E84CD639D21EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		308A6941C9C7C5A9821D3AF4 /* dyci-funTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "dyci-funTests-Info.plist"; sourceTree = "<group>"; };
+		308A6A1BB29FE82546E148A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		308A6A2F06519CF00F7B33FC /* MyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVC.m; sourceTree = "<group>"; };
+		308A6A8B6FD9057523028579 /* swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swizzle.m; sourceTree = "<group>"; };
+		308A6BD16A3BACA94D2715E7 /* dyci-fun-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "dyci-fun-Info.plist"; sourceTree = "<group>"; };
+		308A6C16EBF772162EB689B9 /* dyci_funTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dyci_funTests.m; sourceTree = "<group>"; };
+		308A6C4ECDE736D661AF1208 /* dyci-fun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dyci-fun-Prefix.pch"; sourceTree = "<group>"; };
+		308A6DBEF9CA69177E31B414 /* swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swizzle.h; sourceTree = "<group>"; };
+		308A6E17D9FB5BBB3B9A63BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		308A6F7DC6F82ECF7324ECED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		308A6F8DE01D0F0A530409BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9351CBD0B66C431E8D8A7A4D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9608C9FF0CC14EECB2309066 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		308A629E4F4E6C209BB1361B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308A69DDA8C5F2D032764779 /* Foundation.framework in Frameworks */,
+				308A6C308A038C14F0DF4B3E /* CoreGraphics.framework in Frameworks */,
+				308A6147455D0F59E109ECE8 /* UIKit.framework in Frameworks */,
+				877CE55F01FA4CFAABFD6A44 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308A649B93F54247A8D93D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308A6B19D8ED70C369419B8D /* XCTest.framework in Frameworks */,
+				308A6D71936823D1B49AA1C0 /* Foundation.framework in Frameworks */,
+				308A6DA36EE80E7EE1379B76 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		308A63842E7D13719DA9ADC9 = {
+			isa = PBXGroup;
+			children = (
+				308A65383FE9A6870181B120 /* Products */,
+				308A6F2AE0B52360674D7D84 /* Frameworks */,
+				308A695E7E469B1B553DDA13 /* dyci-fun */,
+				308A69FAADEDB87F56708BDF /* dyci-funTests */,
+				9351CBD0B66C431E8D8A7A4D /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		308A65383FE9A6870181B120 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				308A60C2F73958CEF7470996 /* dyci-fun.app */,
+				308A656F31BD9FE2B4D14D8F /* dyci-funTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		308A65FFA81937C7CE1D35F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				308A6BD16A3BACA94D2715E7 /* dyci-fun-Info.plist */,
+				308A6DC3F334B7F9CB83FBFA /* InfoPlist.strings */,
+				308A681531AB30EB2E36576F /* main.m */,
+				308A6C4ECDE736D661AF1208 /* dyci-fun-Prefix.pch */,
+				308A675E6A9DDB0D81D21A28 /* alarm.wav */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		308A695E7E469B1B553DDA13 /* dyci-fun */ = {
+			isa = PBXGroup;
+			children = (
+				308A65FFA81937C7CE1D35F7 /* Supporting Files */,
+				308A6E17D9FB5BBB3B9A63BB /* AppDelegate.h */,
+				308A6874D2AB883007F5EEE9 /* AppDelegate.m */,
+				308A6F7DC6F82ECF7324ECED /* Images.xcassets */,
+				308A6A2F06519CF00F7B33FC /* MyVC.m */,
+				308A65CDBFCA845A8A51FF32 /* MyVC.h */,
+				308A6A8B6FD9057523028579 /* swizzle.m */,
+				308A6DBEF9CA69177E31B414 /* swizzle.h */,
+				308A6523F19821EFF7984850 /* MyCell.m */,
+				308A6756ADDBA0F3384E763A /* MyCell.h */,
+			);
+			path = "dyci-fun";
+			sourceTree = "<group>";
+		};
+		308A69FAADEDB87F56708BDF /* dyci-funTests */ = {
+			isa = PBXGroup;
+			children = (
+				308A6BCDB5334BF94FF22D6F /* Supporting Files */,
+				308A6C16EBF772162EB689B9 /* dyci_funTests.m */,
+			);
+			path = "dyci-funTests";
+			sourceTree = "<group>";
+		};
+		308A6BCDB5334BF94FF22D6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				308A6941C9C7C5A9821D3AF4 /* dyci-funTests-Info.plist */,
+				308A604705117CCAAD2F15CD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		308A6F2AE0B52360674D7D84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				308A6885114E84CD639D21EE /* Foundation.framework */,
+				308A6F8DE01D0F0A530409BC /* CoreGraphics.framework */,
+				308A671FF5D44E3393065672 /* UIKit.framework */,
+				308A60B549581DFE6618ECB9 /* XCTest.framework */,
+				9608C9FF0CC14EECB2309066 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		308A6775A707A80459DC656B /* dyci-funTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308A6E38313847C0D0D8FD5F /* Build configuration list for PBXNativeTarget "dyci-funTests" */;
+			buildPhases = (
+				308A6A958DA02A5F298119EB /* Sources */,
+				308A649B93F54247A8D93D34 /* Frameworks */,
+				308A608AD5F83022D61FFFA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308A6661F602B7A8FB46EB8B /* PBXTargetDependency */,
+			);
+			name = "dyci-funTests";
+			productName = "dyci-funTests";
+			productReference = 308A656F31BD9FE2B4D14D8F /* dyci-funTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		308A6F4A2A5F4E147A10216E /* dyci-fun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308A6AE58384EAA4423AFCA6 /* Build configuration list for PBXNativeTarget "dyci-fun" */;
+			buildPhases = (
+				57D6916294CD46209291DE6B /* Check Pods Manifest.lock */,
+				308A6C256C23BBF1E600769F /* Sources */,
+				308A629E4F4E6C209BB1361B /* Frameworks */,
+				308A69BEA5E1693B11FAE9FC /* Resources */,
+				E4188C75D91540D89949F94D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dyci-fun";
+			productName = "dyci-fun";
+			productReference = 308A60C2F73958CEF7470996 /* dyci-fun.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		308A616F48DE636D46ED336D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Betafunk;
+			};
+			buildConfigurationList = 308A64F9FB54A72F447AAD53 /* Build configuration list for PBXProject "dyci-fun" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 308A63842E7D13719DA9ADC9;
+			productRefGroup = 308A65383FE9A6870181B120 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				308A6F4A2A5F4E147A10216E /* dyci-fun */,
+				308A6775A707A80459DC656B /* dyci-funTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		308A608AD5F83022D61FFFA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308A6186CDD328BD86FF076F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308A69BEA5E1693B11FAE9FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308A64BBCAA051F917570BEE /* InfoPlist.strings in Resources */,
+				308A62855BAC69FACBC0E020 /* Images.xcassets in Resources */,
+				308A6AB38C4C4383976CED1B /* alarm.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57D6916294CD46209291DE6B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4188C75D91540D89949F94D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		308A6A958DA02A5F298119EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308A68E3011B510C16967A7F /* dyci_funTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308A6C256C23BBF1E600769F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308A6E4F3EAEC2AE14F2AA76 /* main.m in Sources */,
+				308A6EDDABDF1033BD93377B /* AppDelegate.m in Sources */,
+				308A6B79F1072B586BF86C66 /* MyVC.m in Sources */,
+				308A66230DD31B772E311253 /* swizzle.m in Sources */,
+				308A6AFB3DBEDF09DEA4E4C2 /* MyCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		308A6661F602B7A8FB46EB8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308A6F4A2A5F4E147A10216E /* dyci-fun */;
+			targetProxy = 308A6CD79FC17ABC0EDD586B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		308A604705117CCAAD2F15CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308A6A1BB29FE82546E148A0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		308A6DC3F334B7F9CB83FBFA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308A62F4AD0F48866E07C858 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		308A68AC58EA28B53F282167 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		308A6A04678763BCEC9A2DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9351CBD0B66C431E8D8A7A4D /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dyci-fun/dyci-fun-Prefix.pch";
+				INFOPLIST_FILE = "dyci-fun/dyci-fun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		308A6A2A3E159FA90D282E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		308A6E42ED0CAF58167544B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dyci-fun/dyci-fun-Prefix.pch";
+				INFOPLIST_FILE = "dyci-funTests/dyci-funTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		308A6EBA62ABB1CAF2ABA550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9351CBD0B66C431E8D8A7A4D /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dyci-fun/dyci-fun-Prefix.pch";
+				INFOPLIST_FILE = "dyci-fun/dyci-fun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		308A6EF4058E17B58A66E5E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dyci-fun/dyci-fun-Prefix.pch";
+				INFOPLIST_FILE = "dyci-funTests/dyci-funTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		308A64F9FB54A72F447AAD53 /* Build configuration list for PBXProject "dyci-fun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308A68AC58EA28B53F282167 /* Release */,
+				308A6A2A3E159FA90D282E2D /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308A6AE58384EAA4423AFCA6 /* Build configuration list for PBXNativeTarget "dyci-fun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308A6A04678763BCEC9A2DA3 /* Release */,
+				308A6EBA62ABB1CAF2ABA550 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		308A6E38313847C0D0D8FD5F /* Build configuration list for PBXNativeTarget "dyci-funTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308A6E42ED0CAF58167544B6 /* Release */,
+				308A6EF4058E17B58A66E5E5 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 308A616F48DE636D46ED336D /* Project object */;
+}

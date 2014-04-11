@@ -1,0 +1,31 @@
+PODS:
+  - dyci (0.1.5.20140124):
+    - dyci/Core
+    - dyci/Helpers
+    - dyci/Injections
+    - dyci/UIKit Support
+  - dyci/Core (0.1.5.20140124)
+  - dyci/Helpers (0.1.5.20140124)
+  - dyci/Injections (0.1.5.20140124)
+  - dyci/UIKit Support (0.1.5.20140124)
+  - JGMethodSwizzler (2.0)
+  - Masonry (0.4.0)
+  - Reveal-iOS-SDK (1.0.3)
+
+DEPENDENCIES:
+  - dyci (from `https://github.com/DyCI/dyci-main.git`)
+  - JGMethodSwizzler
+  - Masonry
+  - Reveal-iOS-SDK
+
+EXTERNAL SOURCES:
+  dyci:
+    :git: https://github.com/DyCI/dyci-main.git
+
+SPEC CHECKSUMS:
+  dyci: a547f35263983aad987afa301ba0a10d2d160c51
+  JGMethodSwizzler: db412531aa7a820f56d05e6cf7fb36bc19d305c5
+  Masonry: d673617c9cbc24aaea90fba20b10e47fd9970a39
+  Reveal-iOS-SDK: f2525cb560a564fdc086316e89ec45ced6977fd3
+
+COCOAPODS: 0.29.0

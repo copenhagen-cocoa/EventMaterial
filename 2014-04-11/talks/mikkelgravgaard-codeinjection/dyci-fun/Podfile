@@ -1,0 +1,5 @@
+platform :ios, "7.0"
+pod 'dyci', :git => 'https://github.com/DyCI/dyci-main.git'
+pod 'Masonry'
+pod 'JGMethodSwizzler'
+pod 'Reveal-iOS-SDK'
