@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BodegaImplementation3</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//
+//  Bodega.m
+//  TheBodega
+//
+//  Created by Mikkel Sindberg Eriksen on 26/04/2016.
+//  Copyright © 2016 Mikkel Sindberg Eriksen. All rights reserved.
+//
+
+#import "Bodega.h"
+
+NSString * const BodegaErrorDomain = @"Bodega panic!";
+
+
+@interface Bodega ()
+
+@property (nonatomic, strong, readwrite) NSString           *name;
+@property (nonatomic, strong, readwrite) id &lt;BeerFetching&gt;  waitress;
+@property (nonatomic, strong, readwrite) id &lt;BeerStoring&gt;   beerStorage;
+
+@end
+
+
+@implementation Bodega
+
+
+#pragma mark - Public Interface
+
+- (instancetype)initWithName:(NSString *)name
+                 beerStorage:(id&lt;BeerStoring&gt;)storage
+                    waitress:(id&lt;BeerFetching&gt;)waitress{
+
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+
+    self.name = name;
+    self.beerStorage = storage;
+    self.waitress = waitress;
+    
+    return self;
+}
+
+- (void)orderBeerWithCompletion:(void (^)(Beer *beer, NSError *error))complete{
+
+    if (self.waitress.busy) {
+    
+        if (complete) {
+            complete(nil, [self bodegaErrorWithErrorCode:BodegaErrorCodeStaffBusy]);
+        }
+    
+    } else {
+        
+        if (complete) {
+            [self.waitress fetchBeerFromStorage:self.beerStorage
+                                       complete:^(Beer *beer, NSError *error) {
+                complete(beer, error);
+            }];
+        }
+        
+    }
+}
+
+
+#pragma mark - Internal Helpers
+
+- (NSError *)bodegaErrorWithErrorCode:(BodegaErrorCode)errorCode{
+
+    return [NSError errorWithDomain:BodegaErrorDomain code:errorCode userInfo:nil];
+}
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E19F2118-4C4F-41B6-B9E6-082B0A60BA0D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BodegaImplementation3</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
