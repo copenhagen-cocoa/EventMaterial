@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BodegaImplementation2</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//
+//  Bodega.m
+//  TheBodega
+//
+//  Created by Mikkel Sindberg Eriksen on 27/04/2016.
+//  Copyright © 2016 Unwire. All rights reserved.
+//
+
+#import "Bodega.h"
+#import "Waitress.h"
+
+NSString * const BodegaErrorDomain = @"Bodega panic!";
+
+
+@interface Bodega ()
+
+@property (nonatomic, strong, readwrite) NSString   *name;
+@property (nonatomic, strong, readwrite) Waitress   *waitress;
+
+@end
+
+
+@implementation Bodega
+
+
+#pragma mark - Public Interface
+
+- (instancetype)initWithName:(NSString *)name waitress:(Waitress *)waitress{
+
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+
+    self.name = name;
+    self.waitress = waitress;
+    
+    return self;
+}
+
+- (void)orderBeerWithCompletion:(void (^)(Beer *beer, NSError *error))complete{
+
+    if (self.waitress.busy) {
+    
+        if (complete) {
+            complete(nil, [self bodegaErrorWithErrorCode:BodegaErrorCodeStaffBusy]);
+        }
+    
+    } else {
+        
+        if (complete) {
+            [self.waitress fetchBeerWithCompletion:^(Beer *beer, NSError *error) {
+                complete(beer, error);
+            }];
+        }
+        
+    }
+}
+
+
+#pragma mark - Internal Helpers
+
+- (NSError *)bodegaErrorWithErrorCode:(BodegaErrorCode)errorCode{
+
+    return [NSError errorWithDomain:BodegaErrorDomain code:errorCode userInfo:nil];
+}
+
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>24202E90-2C46-4000-B392-C27F81DBB5BB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BodegaImplementation2</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

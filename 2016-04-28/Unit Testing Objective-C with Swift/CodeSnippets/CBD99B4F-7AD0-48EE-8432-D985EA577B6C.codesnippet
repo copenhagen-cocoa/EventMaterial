@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BeerTests1</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//
+//  BeerTests.swift
+//  TheBodega
+//
+//  Created by Mikkel Sindberg Eriksen on 27/04/2016.
+//  Copyright © 2016 Unwire. All rights reserved.
+//
+
+import XCTest
+
+class BeerTests: XCTestCase {
+
+    let beerName = "Bitches Brew"
+    let percentage = 7.5
+    let centiliters = 50
+    
+    var beer: Beer!
+
+    override func setUp() {
+        super.setUp()
+        
+        self.beer = Beer(name: self.beerName,
+            alcoholPercentage: self.percentage,
+                  centiliters: self.centiliters)
+    }
+    
+    
+    // MARK: - Test Properties etc.
+    
+    func testThatItInitializes() {
+        XCTAssertNotNil(self.beer)
+    }
+    
+    func testThatItCanHaveAName() {
+        XCTAssertEqual(self.beerName, self.beer.name)
+    }
+    
+    func testThatItCanHaveAnAlcoholPercentage() {
+        XCTAssertEqual(self.percentage, self.beer.percentage)
+    }
+    
+    func testThatItCanHaveCentiliters() {
+        XCTAssertEqual(self.centiliters, self.beer.centiliters)
+    }
+
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CBD99B4F-7AD0-48EE-8432-D985EA577B6C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BeerTests1</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

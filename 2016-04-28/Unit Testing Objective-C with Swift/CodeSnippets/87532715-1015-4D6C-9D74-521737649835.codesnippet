@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>WaitressHeader3</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//
+//  Waitress.h
+//  TheBodega
+//
+//  Created by Mikkel Sindberg Eriksen on 26/04/2016.
+//  Copyright © 2016 Mikkel Sindberg Eriksen. All rights reserved.
+//
+
+#import &lt;Foundation/Foundation.h&gt;
+#import "BeerFridge.h"
+
+/**
+ * @brief A protocol defining an interface for fetching beer.
+ */
+@protocol BeerFetching &lt;NSObject&gt;
+
+/**
+ * @brief A property indicating if BeerFetching is busy.
+ */
+@property (nonatomic, assign, readonly) BOOL busy;
+
+/**
+ * @brief Fetch a beer from the given storage and execute complete when done.
+ * 
+ * @param beerStorage The storage that the beer should be fetched from.
+ * @param complete The completion block to execute when done fetching.
+ */
+- (void)fetchBeerFromStorage:(id &lt;BeerStoring&gt;)beerStorage
+                    complete:(void(^)(Beer *beer, NSError *error))complete;
+
+@end
+
+
+/**
+ * @brief Class representing a waitress for fetching beer!
+ */
+@interface Waitress : NSObject &lt;BeerFetching&gt;
+
+/**
+ * @brief The name of the waitress.
+ */
+@property (nonatomic, strong, readonly) NSString *name;
+
+/**
+ * @brief Initializes a waitress with the given name.
+ *
+ * @param name The name to give the waitress.
+ *
+ * @return A waitress initialized with the given name.
+ */
+- (instancetype)initWithName:(NSString *)name;
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>87532715-1015-4D6C-9D74-521737649835</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>WaitressHeader3</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

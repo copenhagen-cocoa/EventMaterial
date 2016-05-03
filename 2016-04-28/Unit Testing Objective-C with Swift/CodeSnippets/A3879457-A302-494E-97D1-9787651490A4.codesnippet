@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>WaitressHeader2</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//
+//  Waitress.h
+//  TheBodega
+//
+//  Created by Mikkel Sindberg Eriksen on 27/04/2016.
+//  Copyright © 2016 Unwire. All rights reserved.
+//
+
+#import &lt;Foundation/Foundation.h&gt;
+#import "BeerFridge.h"
+
+/**
+ * @brief Class representing a waitress for fetching beer!
+ */
+@interface Waitress : NSObject
+
+/**
+ * @brief The name of the waitress.
+ */
+@property (nonatomic, strong, readonly) NSString *name;
+
+/**
+ * @brief A property indicating if BeerFetching is busy.
+ */
+@property (nonatomic, assign, readonly) BOOL busy;
+
+/**
+ * @brief Initializes a waitress with the given name.
+ *
+ * @param name The name to give the waitress.
+ *
+ * @return A waitress initialized with the given name.
+ */
+- (instancetype)initWithName:(NSString *)name;
+
+/**
+ * @brief Fetch a beer from the given storage and execute complete when done.
+ * 
+ * @param beerStorage   The storage that the beer should be fetched from.
+ * @param complete      The completion block to execute when done fetching.
+ */
+- (void)fetchBeerFromStorage:(id &lt;BeerStoring&gt;)beerStorage
+                    complete:(void(^)(Beer *beer, NSError *error))complete;
+
+@end
+
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A3879457-A302-494E-97D1-9787651490A4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>WaitressHeader2</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
