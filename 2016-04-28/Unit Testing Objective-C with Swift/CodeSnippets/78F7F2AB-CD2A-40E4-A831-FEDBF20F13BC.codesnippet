@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>WaitressImplementation2</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//
+//  Waitress.m
+//  TheBodega
+//
+//  Created by Mikkel Sindberg Eriksen on 27/04/2016.
+//  Copyright © 2016 Unwire. All rights reserved.
+//
+
+#import "Waitress.h"
+
+@interface Waitress ()
+
+@property (nonatomic, strong, readwrite) NSString *name;
+@property (nonatomic, assign, readwrite) BOOL busy;
+
+@end
+
+
+@implementation Waitress
+
+
+#pragma mark - Public Interface
+
+- (instancetype)initWithName:(NSString *)name{
+
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+
+    self.name = name;
+    
+    return self;
+}
+
+- (void)fetchBeerFromStorage:(id&lt;BeerStoring&gt;)beerStorage
+                    complete:(void (^)(Beer *, NSError *))complete{
+
+    self.busy = YES;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+    
+        Beer *beer = [beerStorage grabBeer];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            self.busy = NO;
+            
+            if (complete) {
+                complete(beer, nil);
+            }
+            
+        });
+        
+    });
+}
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>78F7F2AB-CD2A-40E4-A831-FEDBF20F13BC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>WaitressImplementation2</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

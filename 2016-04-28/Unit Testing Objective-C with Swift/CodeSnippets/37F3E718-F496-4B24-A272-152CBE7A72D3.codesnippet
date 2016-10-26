@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BodegaTests1</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//
+//  BodegaTests.swift
+//  TheBodega
+//
+//  Created by Mikkel Sindberg Eriksen on 26/04/2016.
+//  Copyright © 2016 Unwire. All rights reserved.
+//
+
+import XCTest
+
+class BodegaTests: XCTestCase {
+ 
+    let bodegaName = "Steve's Den"
+    let fakeWaitress = FakeWaitress()
+    
+    var bodega: Bodega!
+    
+    override func setUp() {
+        super.setUp()
+        
+        self.bodega = Bodega(name: self.bodegaName, waitress: self.fakeWaitress)
+    }
+    
+    
+    // MARK: - Test Properties etc.
+    
+    func testThatItHasABodegaErrorDomain() {
+        XCTAssertEqual(BodegaErrorDomain, "Bodega panic!")
+    }
+    
+    func testThatItCanHaveAName() {
+        XCTAssertEqual(self.bodegaName, self.bodega.name)
+    }
+    
+    func testThatItCanHaveAWaitress() {
+        XCTAssertTrue(self.fakeWaitress === self.bodega.waitress)
+    }
+    
+    
+    // MARK: - Test Ordering Beer
+    
+    func testThatOrderingBeerFailsIfWaitressIsBusy() {
+    
+        let expectation = expectationWithDescription("Expect staff busy error")
+        self.fakeWaitress._busy = true
+        
+        self.bodega.orderBeerWithCompletion { beer, error in
+            
+            if let orderError = error {
+                XCTAssertEqual(orderError.code, BodegaErrorCode.StaffBusy.rawValue)
+                expectation.fulfill()
+            }
+            
+        }
+        
+        waitForExpectationsWithTimeout(1, handler: nil)
+    }
+    
+    func testThatOrderingBeerSucceedsIfWaitressIsNotBusy() {
+    
+        let expectation = expectationWithDescription("Expect beer!")
+        self.fakeWaitress._busy = false
+        
+        self.bodega.orderBeerWithCompletion { beer, error in
+            XCTAssertNotNil(beer)
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(1, handler: nil)
+    }
+    
+    
+    // MARK: - Fakes
+
+    class FakeWaitress: Waitress{
+    
+        var _busy = false
+    
+        override var busy: Bool {
+            get {
+                return self._busy
+            }
+        }
+        
+        override func fetchBeerWithCompletion(complete: ((Beer!, NSError!) -&gt; Void)!) {
+        
+            if (complete != nil) {
+                complete(Beer(), nil)
+            }
+        
+        }
+    }
+
+}
+
+
+
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>37F3E718-F496-4B24-A272-152CBE7A72D3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BodegaTests1</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
